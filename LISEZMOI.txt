@@ -1,0 +1,52 @@
+LA LANGUE AU CHAT : site à mettre en ligne
+==========================================
+
+Ce dossier contient le site complet, déjà préparé pour son adresse définitive :
+https://e-learning-langues.github.io/lalangueauchat/
+
+Il fonctionne sans base de données ni logiciel à installer. Pour le consulter sur votre ordinateur avant de le publier, ouvrez le fichier index.html dans un navigateur.
+
+
+1. METTRE LE SITE EN LIGNE SUR GITHUB PAGES
+
+L'adresse ci-dessus suppose un compte (ou une organisation) GitHub nommé « e-learning-langues » et un dépôt nommé « lalangueauchat ». Si l'un des deux noms change, l'adresse change aussi : demandez alors à Claude de régénérer le site avec la nouvelle adresse.
+
+  1. Connectez-vous sur https://github.com avec le compte « e-learning-langues ».
+  2. Créez un dépôt public nommé exactement « lalangueauchat » (bouton « New »).
+  3. Dans le dépôt, choisissez « Add file », puis « Upload files ». Faites glisser tout le contenu de ce dossier (les fichiers et les dossiers assets, fonts et img), puis validez avec « Commit changes ».
+  4. Ouvrez « Settings », puis « Pages ». Dans « Build and deployment », choisissez « Deploy from a branch », la branche « main » et le dossier « / (root) », puis « Save ».
+  5. Après quelques minutes, le site est visible à l'adresse indiquée en haut de ce fichier.
+
+Pour une mise à jour, déposez de nouveau les fichiers modifiés de la même manière : ils remplacent les anciens.
+Les intitulés des menus de GitHub peuvent changer au fil du temps.
+
+
+2. ÊTRE TROUVÉES SUR GOOGLE ET BING
+
+Le site contient déjà tout ce qu'il faut : le plan du site (sitemap.xml), l'adresse de référence de chaque page et la vignette de partage (image du chat et du titre) qui s'affiche quand on colle le lien sur LinkedIn, Teams ou dans un mail.
+
+  1. Google Search Console (https://search.google.com/search-console) : ajoutez une propriété de type « Préfixe d'URL » avec l'adresse complète du site, en terminant par /lalangueauchat/.
+  2. Pour prouver que le site est à vous, choisissez la méthode « Fichier HTML » : téléchargez le petit fichier proposé par Google et déposez-le dans le dépôt GitHub, à côté de index.html, comme à l'étape 3 ci-dessus. Revenez ensuite dans Search Console et cliquez sur « Valider ».
+  3. Dans le menu « Sitemaps », saisissez sitemap.xml et envoyez.
+  4. Bing Webmaster Tools (https://www.bing.com/webmasters) : vous pouvez importer directement le site depuis Google Search Console.
+  5. Comptez plusieurs jours, parfois quelques semaines, avant l'apparition dans les résultats.
+
+Ce qui fait le plus pour être trouvées : des liens vers le site depuis des sites reconnus.
+  - la page de l'Espace Langues sur le site de l'Université Sorbonne Paris Nord ;
+  - le dépôt des affiches sur HAL, avec l'adresse du site ;
+  - la page du colloque MEDIALECT, si les organisateurs l'acceptent ;
+  - LinkedIn, les listes professionnelles et vos signatures de mail.
+
+
+3. CONTENU DU DOSSIER
+
+  index.html ............ accueil
+  [nom-de-station].html . les sept stations
+  catalogue.html ........ toutes les activités, avec recherche et filtres
+  404.html .............. page affichée quand une adresse n'existe pas
+  sitemap.xml ........... la liste des pages, pour les moteurs de recherche
+  assets/ ............... mise en forme et fonctionnement
+  fonts/ ................ polices de caractères
+  img/ .................. images (dont partage.jpg, la vignette de partage)
+
+Licence : CC BY-NC-SA 4.0. Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte.
