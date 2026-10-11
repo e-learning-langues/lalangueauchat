@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility | La langue au Chat</title>
+<meta name="description" content="Accessibility of La langue au Chat: our commitments, the reading-comfort settings, the results of our internal RGAA 4.1 audit and how to report a problem.">
+<meta name="author" content="Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte">
+<link rel="canonical" href="https://e-learning-langues.github.io/lalangueauchat/en/accessibilite.html">
+<link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/accessibilite.html">
+<link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/accessibilite.html">
+<link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/accessibilite.html">
+<link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/accessibilite.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="La langue au Chat">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Accessibility">
+<meta property="og:description" content="Accessibility of La langue au Chat: our commitments, the reading-comfort settings, the results of our internal RGAA 4.1 audit and how to report a problem.">
+<meta property="og:url" content="https://e-learning-langues.github.io/lalangueauchat/en/accessibilite.html">
+<meta property="og:image" content="https://e-learning-langues.github.io/lalangueauchat/img/partage-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La langue au Chat. Generative AI in our language courses: activities, prompts, limitations and avenues. Espace Langues, Université Sorbonne Paris Nord.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://e-learning-langues.github.io/lalangueauchat/img/partage-en.jpg">
+<meta name="twitter:image:alt" content="La langue au Chat. Generative AI in our language courses: activities, prompts, limitations and avenues. Espace Langues, Université Sorbonne Paris Nord.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F3EC">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/prefs.js"></script>
+<noscript><style>[role=tabpanel][hidden]{display:block!important}.reflect .tablist{display:none}.reflect .panel-h{display:block!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+.legal{max-width:48rem;padding-block:2.4rem 1rem}
+.legal>section{margin-bottom:2.6rem}
+.legal h2{font-size:clamp(1.45rem,2.6vw,1.95rem);font-weight:800;letter-spacing:-.02em;margin:0 0 .9rem}
+.legal h3{font-size:1.18rem;font-weight:800;margin:1.6rem 0 .6rem}
+.legal p,.legal li{line-height:1.6}
+.legal ul{padding-left:1.3rem;margin:0 0 1em}
+.legal li{margin-bottom:.5em}
+.legal li::marker{color:var(--muted)}
+.legal .note{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--blue);border-radius:var(--radius-s);padding:1rem 1.2rem;margin:0 0 1rem}
+.legal .rates{display:flex;flex-wrap:wrap;gap:1rem;list-style:none;padding:0;margin:0 0 1rem}
+.legal .rates li{flex:1 1 15rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:1rem 1.2rem;margin:0}
+.legal .rates strong{display:block;font:800 2.2rem/1.1 var(--ff-display);letter-spacing:-.02em;margin-bottom:.3rem}
+.legal .issues li{margin-bottom:.9em}
+.legal .crit{color:var(--muted);white-space:nowrap}
+.legal .updated{color:var(--muted);font-size:.95rem}
+.legal address{font-style:normal}
+</style>
+</head>
+<body class="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.2-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8.5 21h7"/></symbol><symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1.2-4.2L16.6 4.4a2 2 0 0 1 2.8 0l1.2 1.2a2 2 0 0 1 0 2.8L9.2 19.8 4 20Z"/><path d="M14.5 6.5l3 3"/></symbol><symbol id="i-lens" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M8.3 11l2 2 3.4-4"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5V5.5Z"/><path d="M12 6v13.5"/></symbol><symbol id="i-scales" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0L5 7ZM19 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7Z"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="4.2" r="1.6"/><path d="M12 5.8L6 20.5M12 5.8l6 14.7M8.4 15h7.2"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="4.5"/><path d="M11 13l8-8M15.5 4.5h4v4"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.3v7.4l6-3.7-6-3.7Z" fill="currentColor"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.6L3 21l1.9-5.3A8.5 8.5 0 1 1 21 11.5Z"/><path d="M12 7.8v4.6M12 15.4h.01"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3Zm0 0 4-8a2.2 2.2 0 0 1 2.2 2.4L12.7 9H19a2 2 0 0 1 2 2.3l-1 6.6a2 2 0 0 1-2 1.7H7"/></symbol><symbol id="i-down" viewBox="0 0 24 24"><g transform="rotate(180 12 12)"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3Zm0 0 4-8a2.2 2.2 0 0 1 2.2 2.4L12.7 9H19a2 2 0 0 1 2 2.3l-1 6.6a2 2 0 0 1-2 1.7H7"/></g></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15"/></symbol><symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></symbol><symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5c4.5 1.4 9.5 1.4 14 0M12 8.5v5M12 13.5l-3.5 7M12 13.5l3.5 7"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-arr-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-arr-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol><symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2ZM9 4v14M15 6v14"/></symbol><symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5l9.5 16.5h-19L12 3.5ZM12 10v4.5M12 17.4h.01"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.8h.01"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-cateye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><path d="M12 7.6c-1.5 1.6-1.5 7.2 0 8.8 1.5-1.6 1.5-7.2 0-8.8Z" fill="currentColor"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.6-3.3 7.7-8 9-4.7-1.3-8-4.4-8-9V6l8-3Z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></symbol><symbol id="i-paw" viewBox="0 0 24 24" fill="currentColor" stroke="none"><ellipse cx="12" cy="16.2" rx="4.6" ry="3.6"/><circle cx="5.6" cy="11" r="2"/><circle cx="9.6" cy="6.8" r="2.1"/><circle cx="14.4" cy="6.8" r="2.1"/><circle cx="18.4" cy="11" r="2"/></symbol><symbol id="i-cathead" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4 3.2L9 6.6A9.5 9.5 0 0 1 15 6.6L20 3.2C20.6 5.3 20.8 7.5 20.5 9.5C20.9 10.5 21.1 11.5 21.1 12.6C21.1 16.9 16.9 20.2 12 20.2C7.1 20.2 2.9 16.9 2.9 12.6C2.9 11.5 3.1 10.5 3.5 9.5C3.2 7.5 3.4 5.3 4 3.2Z"/></symbol></defs></svg>
+<a class="skip" href="#contenu">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><span class="cat"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cathead"/></svg></span><span>La langue au <b>Chat</b></span></a><span class="lang-switch lang-m" role="group" aria-label="Site language"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.9 5.8 3.9 9s-1.3 6.2-3.9 9c-2.6-2.8-3.9-5.8-3.9-9S9.4 5.8 12 3Z"/></svg><a href="../accessibilite.html" hreflang="fr" lang="fr">FR<span class="sr-only"> Français</span></a><a href="accessibilite.html" hreflang="en" lang="en" aria-current="true">EN<span class="sr-only"> English</span></a><a href="../es/accessibilite.html" hreflang="es" lang="es">ES<span class="sr-only"> Español</span></a></span>
+<a class="icon-btn contact-m" href="mailto:elearningel@univ-paris13.fr?subject=Site%20La%20langue%20au%20Chat" aria-label="Contact: email elearningel@univ-paris13.fr"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-mail"/></svg></a>
+<button class="btn ghost icon-btn burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu" style="border:0"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-menu"/></svg></button>
+<nav class="nav" id="nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<details class="menu"><summary><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-map"/></svg> Stations <svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-chev"/></svg></summary>
+<div class="menu-panel"><a href="interaction-ecrite.html" style="--c:var(--blue)"><span class="n">1</span><span>Written interaction</span></a><a href="production-orale.html" style="--c:var(--coral)"><span class="n">2</span><span>Spoken production</span></a><a href="production-ecrite.html" style="--c:var(--green)"><span class="n">3</span><span>Written production</span></a><a href="outils-et-regard-critique.html" style="--c:var(--violet)"><span class="n">4</span><span>Learning the tools and fostering critical thinking</span></a><a href="initiation-recherche.html" style="--c:var(--teal)"><span class="n">5</span><span>First steps in research… in the original language</span></a><a href="evaluation-sommative.html" style="--c:var(--amber)"><span class="n">6</span><span>Summative assessment</span></a><a href="conception-pedagogique.html" style="--c:var(--rose)"><span class="n">7</span><span>Instructional design</span></a><a class="all" href="index.html#stations"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-map"/></svg><span>All stations</span></a></div></details>
+<a href="catalogue.html"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-grid"/></svg> Catalogue</a>
+<a class="contact" href="mailto:elearningel@univ-paris13.fr?subject=Site%20La%20langue%20au%20Chat" title="Email the team: elearningel@univ-paris13.fr"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-mail"/></svg> Contact</a>
+<span class="lang-switch" role="group" aria-label="Site language"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.9 5.8 3.9 9s-1.3 6.2-3.9 9c-2.6-2.8-3.9-5.8-3.9-9S9.4 5.8 12 3Z"/></svg><a href="../accessibilite.html" hreflang="fr" lang="fr">FR<span class="sr-only"> Français</span></a><a href="accessibilite.html" hreflang="en" lang="en" aria-current="true">EN<span class="sr-only"> English</span></a><a href="../es/accessibilite.html" hreflang="es" lang="es">ES<span class="sr-only"> Español</span></a></span><span class="nav-tools"><button type="button" class="icon-btn" data-open-a11y aria-label="Accessibility and reading comfort" title="Accessibility and reading comfort"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-access"/></svg></button>
+<button type="button" class="icon-btn" data-toggle-theme aria-label="Switch between light and dark theme" title="Light / dark theme"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-moon"/></svg></button></span>
+</nav></div></header>
+<div class="progress" aria-hidden="true"><span></span></div>
+<main id="contenu" tabindex="-1">
+<section class="cat-top" aria-labelledby="titre"><div class="wrap">
+<p class="kicker">ESPACE LANGUES · UNIVERSITÉ SORBONNE PARIS NORD</p>
+<h1 id="titre">Accessibility</h1>
+<p class="lead">We want everyone to be able to use this site: with a keyboard, with a screen reader, on a small screen or with strong zoom. Here is what we do about it, what we have checked, what still needs fixing and how to report a problem.</p>
+</div></section>
+<div class="wrap"><div class="legal">
+<section><h2 id="a-cadre">Our frame of reference</h2>
+<p><em>La langue au Chat</em> is not an official online service of Université Sorbonne Paris Nord, so it is not covered by a statutory accessibility statement. We nevertheless use the <a href="https://accessibilite.numerique.gouv.fr/" target="_blank" rel="noopener noreferrer">RGAA 4.1 (<span lang="fr">Référentiel général d’amélioration de l’accessibilité</span>, the French accessibility standard) (in French)<span class="sr-only"> (opens in a new tab)</span></a>, which takes up the WCAG 2.1 level AA success criteria, as our working reference.</p>
+</section>
+<section><h2 id="a-eng">Our commitments</h2>
+<ul>
+<li>Structure every page: a clear heading hierarchy, navigation landmarks and a “Skip to content” link.</li>
+<li>Make every feature usable with a keyboard, with a focus indicator that is always visible.</li>
+<li>Meet the RGAA contrast requirements, in both the light and the dark theme.</li>
+<li>Give meaningful images a text alternative and hide decorative images from assistive technologies.</li>
+<li>Mark passages written in another language, so that speech synthesis pronounces them correctly.</li>
+<li>Never force animation or sound on visitors.</li>
+<li>Check every new page before publishing it, and fix the problems you report to us.</li>
+</ul>
+</section>
+<section><h2 id="a-regl">Adjusting the display</h2>
+<p>The “Accessibility and reading comfort” button, in the header of every page, opens the following settings:</p>
+<ul>
+<li><strong>Theme</strong>: automatic (your system’s theme), light or dark;</li>
+<li><strong>Text size</strong>: normal, large, very large or maximum;</li>
+<li><strong>Spacing</strong>: normal or wide (more space between lines, letters and words);</li>
+<li><strong>Contrast</strong>: standard or high;</li>
+<li><strong>Animations</strong>: follow your system, or none;</li>
+<li><strong>Cat illustrations</strong>: show or hide.</li>
+</ul>
+<p>These settings stay in your browser and apply to every page. The site also follows your system preferences: dark theme, reduced motion and high-contrast mode (Windows forced colours).</p>
+<p><button type="button" class="btn ghost" data-open-a11y>Open the reading-comfort settings</button></p>
+</section>
+<section><h2 id="a-audit">Internal audit of 11 October 2026</h2>
+<p>We checked the 106 criteria of the RGAA 4.1 on a sample of 8 items, chosen to represent the different kinds of page on the site:</p>
+<ul>
+<li>the <a href="../index.html" hreflang="fr">French home page</a>;</li>
+<li>a station with prompts, tabs, collapsible sections, a demo and a challenge: <a href="../interaction-ecrite.html" hreflang="fr">Written interaction</a> (in French);</li>
+<li>the longest page: <a href="../conception-pedagogique.html" hreflang="fr">Instructional design</a> (in French);</li>
+<li>the <a href="../catalogue.html" hreflang="fr">catalogue</a> (in French), with its search and filters;</li>
+<li>the <a href="index.html">English home page</a>;</li>
+<li>the error page (404), in French and under the English address;</li>
+<li>the appendix page <a href="../docs/fr/echange-etudiante-fle.html" hreflang="fr">“<span lang="fr">Une étudiante de FLE dialogue avec l’IAG</span>”</a> [A French-as-a-foreign-language student talks with GenAI];</li>
+<li>an assessment rubric in PDF: <a href="../docs/fr/EVALUATION_PO_Type2.pdf" type="application/pdf" hreflang="fr">spoken production, type 2 (PDF, in French)</a>.</li>
+</ul>
+<h3>Results</h3>
+<ul class="rates">
+<li><strong>90.6%</strong> of criteria met across the whole sample: 58 of the 64 that apply to it (the other 42 do not apply, for example those on embedded videos or frames).</li>
+<li><strong>97.0%</strong> on average page by page, from 94.1% for the PDF to 100% for the error page.</li>
+</ul>
+<p>The first rate is the stricter one: a criterion counts as not met as soon as it fails on a single item in the sample.</p>
+<h3>Method</h3>
+<p>Tests in the Chromium browser at widths of 320 and 1,280 pixels, in the light and the dark theme, with high contrast and with forced colours; automated testing with axe-core; code validation with the W3C Nu HTML Checker; contrast calculations and checks of headings, languages, 200% zoom and text spacing; a complete keyboard walk-through; inspection of the PDF structure (tags, language, title, reading order).</p>
+<h3>What still needs fixing</h3>
+<p>Six criteria are not yet met everywhere. Here are the problems we found and what we are doing about them.</p>
+<ul class="issues">
+<li><strong>Home page (in all three languages)</strong>: in the two AIAS scale tables, the first cell of each row (“AIAS 1”, “AIAS 2”…) is not marked up as a row header, so a screen reader does not announce the level when you read a row cell by cell. <span class="crit">(criterion 5.6)</span> Fix planned.</li>
+<li><strong>PDF rubric “Spoken production, type 2”</strong>: the same problem for the cells in the “Criterion” column and for the section headings (“GRAMMAR”…). <span class="crit">(criterion 5.6)</span> Fix planned: the PDF will be regenerated in all three languages.</li>
+<li><strong>Instructional design station</strong>: the HTML code of the eight collapsible headings is not valid (a block placed where the language does not allow it). <span class="crit">(criterion 8.2)</span> Fix planned.</li>
+<li><strong>Home page and catalogue</strong>: empty tags are used to draw the progress bar and the colour dots of the filters. <span class="crit">(criterion 8.9)</span> Fix planned: these decorations will be drawn by the style sheet.</li>
+<li><strong>Stations</strong>: in the “Limitations” and “Avenues we are exploring” tabs, the points are shown as cards without list structure, so a screen reader does not announce how many there are. <span class="crit">(criterion 9.3)</span> Fix planned on the six stations concerned.</li>
+<li><strong>Catalogue</strong>: the label of the search field is read only by screen readers; on screen, it is accompanied only by placeholder text, which disappears as soon as you type. <span class="crit">(criterion 11.1)</span> Fix planned.</li>
+<li><strong>Appendix page “<span lang="fr">Une étudiante de FLE dialogue avec l’IAG</span>”</strong>: it has no navigation menu, only a back link and the footer. <span class="crit">(criterion 12.1)</span> Fix planned: a menu will be added.</li>
+</ul>
+<p>We also noted some improvements that do not block access:</p>
+<ul>
+<li>in the dark theme, the placeholder text of the catalogue search field is slightly low in contrast;</li>
+<li>in Windows high-contrast mode, the ticked state of the catalogue filters is not visible;</li>
+<li>in the catalogue, the challenge descriptions are cut off after three lines (the full text is on the station page, and screen readers read it in full);</li>
+<li>to be checked with VoiceOver: headings placed inside collapsible sections may not appear in the headings list in Safari.</li>
+</ul>
+<p>We will update this page each time a fix goes live.</p>
+</section>
+<section><h2 id="a-tiers">Third-party content</h2>
+<p>The site links to content hosted by other services. Some of it was created by the team, but all of it depends on the platform that hosts it, and we have not assessed it:</p>
+<ul>
+<li>YouTube videos (demos, trailers, scenarios, the liAIsons project playlist): their subtitles have not been checked and they do not have transcripts yet;</li>
+<li>the liAIsons project podcast on Spotify;</li>
+<li>Genially activities (games, songs, exercises);</li>
+<li>Claude apps (claude.ai) and pages hosted on tiiny.site;</li>
+<li>Google Drive documents (PDFs, images, audio extracts);</li>
+<li>other websites we cite (Council of Europe, AI Assessment Scale, etc.).</li>
+</ul>
+<p>If any of this content causes you difficulty, email us: we will try to offer you another version.</p>
+</section>
+<section><h2 id="a-tech">Technologies used</h2>
+<p>HTML, CSS and JavaScript, with no external library. The site is static and hosted on GitHub Pages.</p>
+<p>Without JavaScript, the content remains readable: the tabs are displayed one below the other and the prompts can still be selected. Only one-click copying, the catalogue filters and the display settings stop working.</p>
+</section>
+<section><h2 id="a-tests">Tests carried out and their limitations</h2>
+<p>Test environment: Chromium 141 on Linux, driven by Playwright; axe-core 4.10.2; Nu HTML Checker 24.10.17; pikepdf and Poppler for the PDF.</p>
+<ul>
+<li>No testing with a real screen reader (NVDA, JAWS, VoiceOver, TalkBack): the output was checked in Chromium’s accessibility tree.</li>
+<li>No testing in Safari or Firefox, or on a real phone or tablet: small screens were simulated.</li>
+<li>Automated tools only find some of the problems: the other criteria were checked one by one.</li>
+<li>This audit was carried out with Claude, the generative AI tool used to build the site; it has not been checked by an independent auditor.</li>
+<li>Only one PDF was audited in detail; the other 23 were only checked for tags, language and title.</li>
+<li>The Spanish pages and the other stations were not in the sample, but they use the same templates.</li>
+</ul>
+</section>
+<section><h2 id="a-signal">Reporting a problem</h2>
+<p>If you cannot access some content or use a feature, email us at <a href="mailto:elearningel@univ-paris13.fr?subject=Accessibility%20-%20La%20langue%20au%20Chat">elearningel@univ-paris13.fr</a>.</p>
+<p>If possible, tell us the page concerned (its address), what you were trying to do, your browser and, if relevant, the assistive technology you use (screen reader, magnifier, voice control…).</p>
+<p>We will reply. If we cannot fix the problem straight away, we will try to send you the content in another form.</p>
+<p class="updated">Page last updated on 11 October 2026.</p>
+</section>
+</div></div>
+</main>
+<footer class="site-footer"><div class="wrap foot">
+<div class="f-org"><p><strong>Université Sorbonne Paris Nord</strong></p><p>Espace Langues · e-learning team</p><p><a href="mailto:elearningel@univ-paris13.fr">elearningel@univ-paris13.fr</a></p>
+<p class="foot-links"><a href="index.html">Home</a> · <a href="catalogue.html">Catalogue</a> · <a href="#contenu">Back to top</a></p></div>
+<div class="f-cc"><img src="../img/p1_25.webp" alt="Creative Commons licence: Attribution, NonCommercial, ShareAlike (CC BY-NC-SA)" width="120" height="35" class="f-logo" ><div><p>© 2026 Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte.</p>
+<p>Licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence (CC BY-NC-SA 4.0)<span class="sr-only"> (opens in a new tab)</span></a>.</p></div></div>
+<div class="f-ai"><img src="../img/aia_logo.webp" alt="AIA logo: assisted by artificial intelligence" width="184" height="233" class="aia f-logo" ><div><p><strong>How this site was made</strong></p>
+<p>The activities, experiments, observations and analyses presented here are our own: they come from our courses and our practice. Generative AI helped us rephrase and harmonise some of the texts; it also suggested a few additional ideas, which we kept or discarded, and it created the cat silhouettes. The site was built with Claude from our posters, then proofread and approved by the team. This English version was translated from the French with Claude; the French version remains the reference.</p>
+<p><a href="https://mpeters.uqo.ca/utilisation-transparente-de-lintelligence-artificielle/" target="_blank" rel="noopener noreferrer">Logos for transparent use of artificial intelligence (in French)<span class="sr-only"> (opens in a new tab)</span></a> <span lang="en">© 2023 by Martine Peters is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0<span class="sr-only" lang="en"> (opens in a new tab)</span></a></span></p></div></div>
+</div></footer>
+<dialog id="a11y" aria-labelledby="a11yt"><div class="dlg">
+<div class="dlg-top"><h2 id="a11yt"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-access"/></svg> Reading comfort</h2><button class="btn ghost small x icon-btn" type="button" data-close aria-label="Close"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-x"/></svg></button></div>
+<div class="ctl"><h3>Theme</h3><div class="seg" role="radiogroup" aria-label="Theme">
+<label><input type="radio" name="theme" value="auto"><span>Auto</span></label><label><input type="radio" name="theme" value="light"><span>Light</span></label><label><input type="radio" name="theme" value="dark"><span>Dark</span></label></div></div>
+<div class="ctl"><h3>Text size</h3><div class="seg" role="radiogroup" aria-label="Text size">
+<label><input type="radio" name="text" value="0"><span>Normal</span></label><label><input type="radio" name="text" value="1"><span>Large</span></label><label><input type="radio" name="text" value="2"><span>Very large</span></label><label><input type="radio" name="text" value="3"><span>Maximum</span></label></div></div>
+<div class="ctl"><h3>Spacing</h3><div class="seg" role="radiogroup" aria-label="Text spacing">
+<label><input type="radio" name="spacing" value="0"><span>Normal</span></label><label><input type="radio" name="spacing" value="1"><span>Wide</span></label></div></div>
+<div class="ctl"><h3>Contrast</h3><div class="seg" role="radiogroup" aria-label="Contrast">
+<label><input type="radio" name="contrast" value="auto"><span>Standard</span></label><label><input type="radio" name="contrast" value="high"><span>High</span></label></div></div>
+<div class="ctl"><h3>Animations</h3><div class="seg" role="radiogroup" aria-label="Animations">
+<label><input type="radio" name="motion" value="auto"><span>Follow my system</span></label><label><input type="radio" name="motion" value="off"><span>None</span></label></div></div>
+<div class="ctl"><h3>Cat illustrations</h3><div class="seg" role="radiogroup" aria-label="Decorative illustrations">
+<label><input type="radio" name="decor" value="auto"><span>Show</span></label><label><input type="radio" name="decor" value="off"><span>Hide</span></label></div></div>
+<div class="dlg-actions"><button type="button" class="btn ghost" data-reset>Reset</button><button type="button" class="btn accent" data-close><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-check"/></svg> Done</button></div>
+</div></dialog>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
