@@ -9,8 +9,8 @@
   var root = document.documentElement;
   var L10N = {
     fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats", langRegion: "Langue", langMsg: "Cette page existe aussi en français.", langGo: "Lire en français", langClose: "Fermer", visited: " (station consultée)", defi1: "défi relevé", defiN: "défis relevés" },
-    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results", langRegion: "Language", langMsg: "This page is also available in English.", langGo: "Read in English", langClose: "Close", visited: " (visited)", defi1: "challenge completed", defiN: "challenges completed" },
-    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados", langRegion: "Idioma", langMsg: "Esta página también está disponible en español.", langGo: "Leer en español", langClose: "Cerrar", visited: " (visitada)", defi1: "reto superado", defiN: "retos superados" }
+    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results", langRegion: "Language", langMsg: "This page is also available in English.", langGo: "Read in English", langClose: "Close", visited: " (visited)", defi1: "challenge completed", defiN: "challenges completed", pv: [ [ "Copy the prompt (original, FR)", "Original prompt (FR) copied!" ], [ "Copy the prompt (adaptable, EN)", "Adaptable prompt (EN) copied!" ] ] },
+    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados", langRegion: "Idioma", langMsg: "Esta página también está disponible en español.", langGo: "Leer en español", langClose: "Cerrar", visited: " (visitada)", defi1: "reto superado", defiN: "retos superados", pv: [ [ "Copiar el prompt (original, FR)", "¡Prompt original (FR) copiado!" ], [ "Copiar el prompt (adaptable, ES)", "¡Prompt adaptable (ES) copiado!" ] ] }
   };
   var T = L10N[(root.getAttribute("lang") || "fr").slice(0, 2)] || L10N.fr;
   var store = {
@@ -408,8 +408,24 @@
       btns.forEach(function(b) {
         b.setAttribute("data-copy", t.getAttribute("aria-controls"));
       });
+      if (T.pv) {
+        var pn = document.getElementById(t.getAttribute("aria-controls")), lg = pn && pn.closest("[lang]");
+        var v = T.pv[lg && /^fr/i.test(lg.getAttribute("lang")) ? 0 : 1];
+        btns.forEach(function(b) {
+          if (b._lbl) b._lbl.nodeValue = " " + v[0];
+          b.setAttribute("aria-label", v[0] + (b._sfx || ""));
+          b.setAttribute("data-ok", v[1]);
+        });
+      }
       if (focus) t.focus();
     }
+    if (T.pv) btns.forEach(function(b) {
+      var tn = Array.prototype.filter.call(b.childNodes, function(c) {
+        return c.nodeType === 3 && c.nodeValue.trim();
+      }).pop(), vis = tn ? tn.nodeValue.trim() : "", al = b.getAttribute("aria-label") || "";
+      b._lbl = tn;
+      b._sfx = vis && al.indexOf(vis) === 0 ? al.slice(vis.length) : al.indexOf(":") > -1 ? al.slice(al.indexOf(":")) : "";
+    });
     tabs.forEach(function(t, i) {
       t.addEventListener("click", function() {
         pick(t);
@@ -423,6 +439,9 @@
         }
       });
     });
+    if (T.pv && tabs.length) pick(tabs.filter(function(x) {
+      return x.getAttribute("aria-selected") === "true";
+    })[0] || tabs[0]);
   });
   var visited = store.get("llc-vues", []);
   var sn = document.body.getAttribute("data-station");
