@@ -1482,7 +1482,7 @@ a.chip.level:hover {
   transition:
     box-shadow 0.2s,
     transform 0.2s;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 0.5rem;
 }
 .act:target {
   outline: 3px solid var(--accent);
@@ -1734,7 +1734,7 @@ a.chip.level:hover {
 }
 .family {
   --accent: var(--rose);
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 0.5rem;
 }
 .aim,
 .family-head {
@@ -1807,6 +1807,7 @@ a.chip.level:hover {
   background: var(--bg-2);
   border-bottom: 1px solid var(--line);
   overflow-x: auto;
+  flex-wrap: wrap;
 }
 .tab {
   white-space: normal;
@@ -4717,7 +4718,7 @@ a.cta-shot:focus-visible {
     color: #f4efe6;
   }
 }
-@media (max-width: 1020px) {
+@media (max-width: 1180px) {
   .tablist {
     flex-wrap: wrap;
     overflow: visible;
@@ -5382,4 +5383,30 @@ h3 {
 }
 .block > details.fold > summary {
   min-width: 0;
+}
+.block > details.fold > summary h2,
+.block > details.fold > summary .h-t,
+.block.family > details.fold > summary .family-head {
+  min-width: 0;
+}
+.block > details.fold > summary h2 {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 400px) {
+  .block.family > details.fold > summary {
+    gap: 0.5rem;
+    padding-inline: 0.75rem;
+  }
+  .block.family > details.fold > summary .family-head {
+    column-gap: 0.7rem;
+  }
+  .block.family > details.fold > summary .family-head .num {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.3rem;
+    border-radius: 13px;
+  }
+  .block.family > details.fold > summary .family-head h2 {
+    font-size: 1.15rem;
+  }
 }

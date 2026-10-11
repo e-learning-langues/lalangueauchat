@@ -8,9 +8,9 @@
   };
   var root = document.documentElement;
   var L10N = {
-    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats", langRegion: "Langue", langMsg: "Cette page existe aussi en français.", langGo: "Lire en français", langClose: "Fermer" },
-    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results", langRegion: "Language", langMsg: "This page is also available in English.", langGo: "Read in English", langClose: "Close" },
-    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados", langRegion: "Idioma", langMsg: "Esta página también está disponible en español.", langGo: "Leer en español", langClose: "Cerrar" }
+    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats", langRegion: "Langue", langMsg: "Cette page existe aussi en français.", langGo: "Lire en français", langClose: "Fermer", visited: " (station consultée)", defi1: "défi relevé", defiN: "défis relevés" },
+    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results", langRegion: "Language", langMsg: "This page is also available in English.", langGo: "Read in English", langClose: "Close", visited: " (visited)", defi1: "challenge completed", defiN: "challenges completed" },
+    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados", langRegion: "Idioma", langMsg: "Esta página también está disponible en español.", langGo: "Leer en español", langClose: "Cerrar", visited: " (visitada)", defi1: "reto superado", defiN: "retos superados" }
   };
   var T = L10N[(root.getAttribute("lang") || "fr").slice(0, 2)] || L10N.fr;
   var store = {
@@ -46,24 +46,44 @@
     }, 2200);
   }
   var burger = $(".burger"), nav = $("#nav");
+  function navInert(on) {
+    $$("main, footer, .lang-hint").forEach(function(e) {
+      e.inert = on;
+    });
+  }
+  function navIcon(on) {
+    var u = burger && $("use", burger);
+    if (u) u.setAttribute("href", on ? "#i-x" : "#i-menu");
+  }
+  function navClose() {
+    nav.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    navInert(false);
+    navIcon(false);
+  }
   if (burger && nav) {
     burger.addEventListener("click", function() {
       var o = nav.classList.toggle("open");
       burger.setAttribute("aria-expanded", o);
       document.body.style.overflow = o ? "hidden" : "";
+      navInert(o);
+      navIcon(o);
     });
     nav.addEventListener("click", function(e) {
-      if (e.target.closest("a")) {
-        nav.classList.remove("open");
-        burger.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
-      }
+      if (e.target.closest("a")) navClose();
+    });
+    window.addEventListener("resize", function() {
+      if (nav.classList.contains("open") && !burger.offsetWidth) navClose();
     });
   }
   var menu = $("details.menu");
   if (menu) {
     document.addEventListener("click", function(e) {
       if (menu.open && !menu.contains(e.target)) menu.open = false;
+    });
+    menu.addEventListener("focusout", function(e) {
+      if (menu.open && e.relatedTarget && !menu.contains(e.relatedTarget)) menu.open = false;
     });
     document.addEventListener("keydown", function(e) {
       if (e.key === "Escape") {
@@ -72,21 +92,28 @@
           $("summary", menu).focus();
         }
         if (nav && nav.classList.contains("open")) {
-          nav.classList.remove("open");
-          burger.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
+          navClose();
           burger.focus();
         }
       }
     });
   }
   var prefs = store.get("llc-prefs", {});
+  var tq = $("[data-toggle-theme]");
+  var darkMq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function curTheme() {
+    return root.getAttribute("data-theme") || (darkMq && darkMq.matches ? "dark" : "light");
+  }
+  function syncTheme() {
+    if (tq) tq.setAttribute("aria-pressed", curTheme() === "dark" ? "true" : "false");
+  }
   function applyPref(k, v) {
     if (v == null || v === "auto" || v === "0" && (k === "text" || k === "spacing")) {
       root.removeAttribute("data-" + k);
     } else root.setAttribute("data-" + k, v);
     prefs[k] = v;
     store.set("llc-prefs", prefs);
+    if (k === "theme") syncTheme();
   }
   var adlg = $("#a11y");
   $$("[data-open-a11y]").forEach(function(b) {
@@ -121,6 +148,7 @@
       [ "theme", "text", "spacing", "motion", "contrast", "decor" ].forEach(function(k) {
         root.removeAttribute("data-" + k);
       });
+      syncTheme();
       $$("input[type=radio]", adlg).forEach(function(r) {
         r.checked = r.value === "auto" || r.value === "0";
       });
@@ -129,12 +157,13 @@
       if (e.target === adlg) adlg.close();
     });
   }
-  var tq = $("[data-toggle-theme]");
   if (tq) tq.addEventListener("click", function() {
-    var cur = root.getAttribute("data-theme");
-    if (!cur) cur = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    applyPref("theme", cur === "dark" ? "light" : "dark");
+    applyPref("theme", curTheme() === "dark" ? "light" : "dark");
   });
+  syncTheme();
+  if (darkMq) {
+    if (darkMq.addEventListener) darkMq.addEventListener("change", syncTheme); else if (darkMq.addListener) darkMq.addListener(syncTheme);
+  }
   var bar = $(".progress span");
   if (bar) {
     var tick = false;
@@ -260,7 +289,7 @@
     rf._tabs = tabs;
     rf._panels = panels;
   });
-  function openHash() {
+  function openHash(ev) {
     var id = decodeURIComponent(location.hash.slice(1));
     if (!id) return;
     var el = document.getElementById(id);
@@ -277,6 +306,16 @@
         if (t && t.getAttribute("aria-selected") !== "true") t.click();
       }
     }
+    var rvl = el.closest(".reveal");
+    if (rvl && !rvl.classList.contains("in")) {
+      rvl.style.transition = "none";
+      rvl.classList.add("in");
+      void rvl.offsetHeight;
+      rvl.style.transition = "";
+    }
+    requestAnimationFrame(function() {
+      if (ev) el.scrollIntoView(); else el.scrollIntoView({ behavior: "instant", block: "start" });
+    });
   }
   window.addEventListener("hashchange", openHash);
   openHash();
@@ -408,7 +447,13 @@
     });
   });
   $$(".st-card[data-n]").forEach(function(c) {
-    if (visited.indexOf(c.getAttribute("data-n")) > -1) c.classList.add("done");
+    if (visited.indexOf(c.getAttribute("data-n")) > -1) {
+      c.classList.add("done");
+      var h = $("h3", c) || c, sr = document.createElement("span");
+      sr.className = "sr-only";
+      sr.textContent = T.visited;
+      h.appendChild(sr);
+    }
   });
   var pb = $(".passport");
   if (pb) {
@@ -421,8 +466,10 @@
     if (i) i.style.width = n / tot * 100 + "%";
     var o = $(".pp-count", pb);
     if (o) o.textContent = n + " / " + tot;
-    var dn = $(".pp-defis", pb);
-    if (dn) dn.textContent = Object.keys(defis).length;
+    var dn = $(".pp-defis", pb), nd = Object.keys(defis).length;
+    if (dn) dn.textContent = nd;
+    var dl = $(".pp-defis-l", pb);
+    if (dl) dl.textContent = (T === L10N.fr ? nd > 1 : nd !== 1) ? T.defiN : T.defi1;
   }
   var lad = $(".ladder");
   if (lad) {
@@ -560,8 +607,30 @@
     });
   }
   var LANG_KEY = "llc-lang-choice";
+  function carry(a) {
+    var base = a.getAttribute("href").split("#")[0].split("?")[0], q = "";
+    if (document.getElementById("cat-grid")) {
+      try {
+        var sp = new URLSearchParams(location.search), o = new URLSearchParams();
+        [ "st", "ty" ].forEach(function(k) {
+          if (sp.get(k)) o.set(k, sp.get(k));
+        });
+        if (o.toString()) q = "?" + o.toString();
+      } catch (e) {}
+    }
+    a.setAttribute("href", base + q + location.hash);
+  }
+  function carryOn(a) {
+    [ "focus", "mouseover", "touchstart" ].forEach(function(ev) {
+      a.addEventListener(ev, function() {
+        carry(a);
+      }, { passive: true });
+    });
+  }
   $$(".lang-switch a[hreflang]").forEach(function(a) {
+    carryOn(a);
     a.addEventListener("click", function() {
+      carry(a);
       store.set(LANG_KEY, a.getAttribute("hreflang"));
     });
   });
@@ -597,7 +666,9 @@
     var x = $(".lang-hint-x", box);
     x.setAttribute("aria-label", M.langClose);
     x.title = M.langClose;
+    carryOn(go);
     go.addEventListener("click", function() {
+      carry(go);
       store.set(LANG_KEY, want);
     });
     x.addEventListener("click", function() {
