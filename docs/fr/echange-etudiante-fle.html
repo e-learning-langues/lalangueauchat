@@ -37,10 +37,13 @@
 .t-a .msg{border-left:3px solid var(--line-2);padding:.1rem 0 .1rem .9rem}
 .ex-end{margin:0;padding:0 1.2rem 1.2rem;color:var(--muted);font-style:italic}
 @media (max-width:480px){.ex-page{width:calc(100% - 2rem)}.thread{padding:.75rem .6rem}.t-s{max-width:calc(100% - .75rem)}.t-s .msg{padding:.7rem .8rem}.t-a{max-width:100%}.t-a .msg{padding-left:.7rem}}
+.ex-nav{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;max-width:60rem;margin:0 auto;padding:1rem 1rem 0;font-weight:700}
 </style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
+<nav class="ex-nav" aria-label="Navigation du site"><a id="ex-n-1" href="../../index.html">Accueil</a><a id="ex-n-2" href="../../index.html#stations">Stations</a><a id="ex-n-3" href="../../catalogue.html">Catalogue</a></nav>
+<script>(function(){var m=/^#(en|es)$/.exec(location.hash),n=document.querySelector(".ex-nav");if(!m||!n)return;var L={en:["Home","Stations","Catalogue","Site navigation"],es:["Inicio","Estaciones","Catálogo","Navegación del sitio"]}[m[1]],H=["index.html","index.html#stations","catalogue.html"];n.lang=m[1];n.setAttribute("aria-label",L[3]);[1,2,3].forEach(function(i){var a=document.getElementById("ex-n-"+i);a.textContent=L[i-1];a.href="../../"+m[1]+"/"+H[i-1];});})();</script>
 <main id="contenu" tabindex="-1" class="ex-page">
 <header class="ex-head">
 <p class="kicker">Station 1 · Interaction écrite · Démo</p>
@@ -85,8 +88,8 @@
 </details>
 </main>
 <footer class="site-footer"><div class="wrap foot">
-<div class="f-org"><p><strong>Université Sorbonne Paris Nord</strong></p><p>Espace Langues · équipe e-learning</p><p><a href="mailto:elearningel@univ-paris13.fr">elearningel@univ-paris13.fr</a></p>
-<p class="foot-links"><a href="../../index.html">Accueil</a> · <a href="../../catalogue.html">Catalogue</a> · <a href="#contenu">Haut de page</a></p></div>
+<div class="f-org"><p><strong>Université Sorbonne Paris Nord</strong></p><p>Espace Langues · équipe e-learning</p><p class="foot-note">Site non officiel de l’Université Sorbonne Paris Nord.</p><p><a href="mailto:elearningel@univ-paris13.fr">elearningel@univ-paris13.fr</a></p>
+<p class="foot-links"><a href="../../index.html">Accueil</a> · <a href="../../catalogue.html">Catalogue</a> · <a href="../../mentions-legales.html">Mentions légales</a> · <a href="../../accessibilite.html">Accessibilité</a> · <a href="#contenu">Haut de page</a></p></div>
 <div class="f-cc"><img src="../../img/p1_25.webp" alt="Licence Creative Commons : attribution, pas d’utilisation commerciale, partage dans les mêmes conditions (CC BY-NC-SA)" width="120" height="35" class="f-logo" ><div><p>© 2026 Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte.</p>
 <p>Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank" rel="noopener noreferrer">Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)<span class="sr-only"> (nouvel onglet)</span></a>.</p></div></div>
 <div class="f-ai"><img src="../../img/aia_logo.webp" alt="Logo AIA : aidé de l’intelligence artificielle" width="184" height="233" class="aia f-logo" ><div><p><strong>Comment ce site a été fait</strong></p>

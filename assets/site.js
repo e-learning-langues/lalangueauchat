@@ -481,7 +481,7 @@
       if (c.classList.contains("done")) n++;
     });
     var tot = $$(".st-card[data-n]").length || 7;
-    var i = $(".bar i", pb);
+    var i = $(".bar .fill", pb);
     if (i) i.style.width = n / tot * 100 + "%";
     var o = $(".pp-count", pb);
     if (o) o.textContent = n + " / " + tot;

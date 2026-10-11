@@ -64,16 +64,16 @@
 <details class="menu"><summary><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-map"/></svg> Stations <svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-chev"/></svg></summary>
 <div class="menu-panel"><a href="interaction-ecrite.html" style="--c:var(--blue)"><span class="n">1</span><span>Written interaction</span></a><a href="production-orale.html" style="--c:var(--coral)"><span class="n">2</span><span>Spoken production</span></a><a href="production-ecrite.html" style="--c:var(--green)"><span class="n">3</span><span>Written production</span></a><a href="outils-et-regard-critique.html" style="--c:var(--violet)"><span class="n">4</span><span>Learning the tools and fostering critical thinking</span></a><a href="initiation-recherche.html" style="--c:var(--teal)"><span class="n">5</span><span>First steps in research… in the original language</span></a><a href="evaluation-sommative.html" style="--c:var(--amber)"><span class="n">6</span><span>Summative assessment</span></a><a href="conception-pedagogique.html" style="--c:var(--rose)"><span class="n">7</span><span>Instructional design</span></a><a class="all" href="index.html#stations"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-map"/></svg><span>All stations</span></a></div></details>
 <a href="catalogue.html"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-grid"/></svg> Catalogue</a>
-<a class="contact" href="mailto:elearningel@univ-paris13.fr?subject=Site%20La%20langue%20au%20Chat" title="Email the team: elearningel@univ-paris13.fr"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-mail"/></svg> Contact</a>
+<a class="contact" href="mailto:elearningel@univ-paris13.fr?subject=Site%20La%20langue%20au%20Chat"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-mail"/></svg> Contact</a>
 <span class="lang-switch" role="group" aria-label="Site language"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.9 5.8 3.9 9s-1.3 6.2-3.9 9c-2.6-2.8-3.9-5.8-3.9-9S9.4 5.8 12 3Z"/></svg><a href="../accessibilite.html" hreflang="fr" lang="fr">FR<span class="sr-only"> Français</span></a><a href="accessibilite.html" hreflang="en" lang="en" aria-current="true">EN<span class="sr-only"> English</span></a><a href="../es/accessibilite.html" hreflang="es" lang="es">ES<span class="sr-only"> Español</span></a></span><span class="nav-tools"><button type="button" class="icon-btn" data-open-a11y aria-label="Accessibility and reading comfort" title="Accessibility and reading comfort"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-access"/></svg></button>
 <button type="button" class="icon-btn" data-toggle-theme aria-label="Switch between light and dark theme" title="Light / dark theme"><svg class="ico" aria-hidden="true" focusable="false" ><use href="#i-moon"/></svg></button></span>
 </nav></div></header>
 <div class="progress" aria-hidden="true"><span></span></div>
 <main id="contenu" tabindex="-1">
 <section class="cat-top" aria-labelledby="titre"><div class="wrap">
-<p class="kicker">ESPACE LANGUES · UNIVERSITÉ SORBONNE PARIS NORD</p>
+<p class="kicker">ESPACE LANGUES (LANGUAGE CENTRE) · UNIVERSITÉ SORBONNE PARIS NORD</p>
 <h1 id="titre">Accessibility</h1>
-<p class="lead">We want everyone to be able to use this site: with a keyboard, with a screen reader, on a small screen or with strong zoom. Here is what we do about it, what we have checked, what still needs fixing and how to report a problem.</p>
+<p class="lead">We want everyone to be able to use this site: with a keyboard, with a screen reader, on a small screen or with strong zoom. Here is what we do about it, what we have checked and fixed, and how to report a problem.</p>
 </div></section>
 <div class="wrap"><div class="legal">
 <section><h2 id="a-cadre">Our frame of reference</h2>
@@ -117,31 +117,30 @@
 </ul>
 <h3>Results</h3>
 <ul class="rates">
-<li><strong>90.6%</strong> of criteria met across the whole sample: 58 of the 64 that apply to it (the other 42 do not apply, for example those on embedded videos or frames).</li>
-<li><strong>97.0%</strong> on average page by page, from 94.1% for the PDF to 100% for the error page.</li>
+<li><strong>100%</strong> of the applicable criteria met across the sample: 64 out of 64 (the other 42 do not apply, for example those on embedded videos or frames).</li>
+<li><strong>90.6%</strong> in the first pass, on the same day, before the fixes described below: 58 criteria out of 64.</li>
 </ul>
-<p>The first rate is the stricter one: a criterion counts as not met as soon as it fails on a single item in the sample.</p>
+<p>A criterion counts as not met as soon as it fails on a single item in the sample. This result applies to this sample and to the tests described below: it does not guarantee that there are no problems at all, especially with a screen reader. Two criteria rest on an interpretation: we treat the catalogue as the site’s search engine (criterion 12.1), and the label of the search field is provided by a tooltip (criterion 11.1).</p>
 <h3>Method</h3>
 <p>Tests in the Chromium browser at widths of 320 and 1,280 pixels, in the light and the dark theme, with high contrast and with forced colours; automated testing with axe-core; code validation with the W3C Nu HTML Checker; contrast calculations and checks of headings, languages, 200% zoom and text spacing; a complete keyboard walk-through; inspection of the PDF structure (tags, language, title, reading order).</p>
-<h3>What still needs fixing</h3>
-<p>Six criteria are not yet met everywhere. Here are the problems we found and what we are doing about them.</p>
+<h3>Fixes made on 11 October 2026</h3>
+<p>The first pass found six criteria that were not met. Here is what we fixed.</p>
 <ul class="issues">
-<li><strong>Home page (in all three languages)</strong>: in the two AIAS scale tables, the first cell of each row (“AIAS 1”, “AIAS 2”…) is not marked up as a row header, so a screen reader does not announce the level when you read a row cell by cell. <span class="crit">(criterion 5.6)</span> Fix planned.</li>
-<li><strong>PDF rubric “Spoken production, type 2”</strong>: the same problem for the cells in the “Criterion” column and for the section headings (“GRAMMAR”…). <span class="crit">(criterion 5.6)</span> Fix planned: the PDF will be regenerated in all three languages.</li>
-<li><strong>Instructional design station</strong>: the HTML code of the eight collapsible headings is not valid (a block placed where the language does not allow it). <span class="crit">(criterion 8.2)</span> Fix planned.</li>
-<li><strong>Home page and catalogue</strong>: empty tags are used to draw the progress bar and the colour dots of the filters. <span class="crit">(criterion 8.9)</span> Fix planned: these decorations will be drawn by the style sheet.</li>
-<li><strong>Stations</strong>: in the “Limitations” and “Avenues we are exploring” tabs, the points are shown as cards without list structure, so a screen reader does not announce how many there are. <span class="crit">(criterion 9.3)</span> Fix planned on the six stations concerned.</li>
-<li><strong>Catalogue</strong>: the label of the search field is read only by screen readers; on screen, it is accompanied only by placeholder text, which disappears as soon as you type. <span class="crit">(criterion 11.1)</span> Fix planned.</li>
-<li><strong>Appendix page “<span lang="fr">Une étudiante de FLE dialogue avec l’IAG</span>”</strong>: it has no navigation menu, only a back link and the footer. <span class="crit">(criterion 12.1)</span> Fix planned: a menu will be added.</li>
+<li><strong>Home page (in all three languages)</strong>: in the two AIAS scale tables, the first cell of each row (“AIAS 1”, “AIAS 2”…) is now a row header, which screen readers announce. <span class="crit">(criterion 5.6)</span></li>
+<li><strong>PDF rubrics “Spoken production, type 2”</strong>: the cells in the “Criterion” column and the section headings are now tagged as headers, in all three languages. <span class="crit">(criterion 5.6)</span></li>
+<li><strong>Instructional design station</strong>: the HTML code of the eight collapsible headings is now valid. <span class="crit">(criterion 8.2)</span></li>
+<li><strong>Home page and catalogue</strong>: the progress bar, the CEFR level strip and the colour dots of the filters no longer rely on empty tags used for decoration. <span class="crit">(criterion 8.9)</span></li>
+<li><strong>Stations</strong>: the points in the “Limitations” and “Avenues we are exploring” tabs are now proper lists. <span class="crit">(criterion 9.3)</span></li>
+<li><strong>Catalogue</strong>: the label of the search field is now also shown as a tooltip, not only to screen readers. <span class="crit">(criterion 11.1)</span></li>
+<li><strong>Appendix page “<span lang="fr">Une étudiante de FLE dialogue avec l’IAG</span>”</strong>: it now has a navigation menu. <span class="crit">(criterion 12.1)</span></li>
 </ul>
-<p>We also noted some improvements that do not block access:</p>
+<p>We also improved three points that did not block access: the contrast of the search placeholder text in the dark theme, the ticked state of the filters in Windows high-contrast mode, and the tooltip of the “Contact” link, which did not match its label.</p>
+<h3>Points to watch</h3>
 <ul>
-<li>in the dark theme, the placeholder text of the catalogue search field is slightly low in contrast;</li>
-<li>in Windows high-contrast mode, the ticked state of the catalogue filters is not visible;</li>
-<li>in the catalogue, the challenge descriptions are cut off after three lines (the full text is on the station page, and screen readers read it in full);</li>
-<li>to be checked with VoiceOver: headings placed inside collapsible sections may not appear in the headings list in Safari.</li>
+<li>In the catalogue, the challenge descriptions are cut off after three lines: the full text is on the station page, and screen readers read it in full.</li>
+<li>To be checked with VoiceOver: headings placed inside collapsible sections may not appear in the headings list in Safari.</li>
 </ul>
-<p>We will update this page each time a fix goes live.</p>
+<p>We will update this page after each new check.</p>
 </section>
 <section><h2 id="a-tiers">Third-party content</h2>
 <p>The site links to content hosted by other services. Some of it was created by the team, but all of it depends on the platform that hosts it, and we have not assessed it:</p>
@@ -179,8 +178,8 @@
 </div></div>
 </main>
 <footer class="site-footer"><div class="wrap foot">
-<div class="f-org"><p><strong>Université Sorbonne Paris Nord</strong></p><p>Espace Langues · e-learning team</p><p><a href="mailto:elearningel@univ-paris13.fr">elearningel@univ-paris13.fr</a></p>
-<p class="foot-links"><a href="index.html">Home</a> · <a href="catalogue.html">Catalogue</a> · <a href="#contenu">Back to top</a></p></div>
+<div class="f-org"><p><strong>Université Sorbonne Paris Nord</strong></p><p>Espace Langues · e-learning team</p><p class="foot-note">Not an official Université Sorbonne Paris Nord website.</p><p><a href="mailto:elearningel@univ-paris13.fr">elearningel@univ-paris13.fr</a></p>
+<p class="foot-links"><a href="index.html">Home</a> · <a href="catalogue.html">Catalogue</a> · <a href="mentions-legales.html">Legal notice</a> · <a href="accessibilite.html" aria-current="page">Accessibility</a> · <a href="#contenu">Back to top</a></p></div>
 <div class="f-cc"><img src="../img/p1_25.webp" alt="Creative Commons licence: Attribution, NonCommercial, ShareAlike (CC BY-NC-SA)" width="120" height="35" class="f-logo" ><div><p>© 2026 Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte.</p>
 <p>Licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence (CC BY-NC-SA 4.0)<span class="sr-only"> (opens in a new tab)</span></a>.</p></div></div>
 <div class="f-ai"><img src="../img/aia_logo.webp" alt="AIA logo: assisted by artificial intelligence" width="184" height="233" class="aia f-logo" ><div><p><strong>How this site was made</strong></p>

@@ -1081,8 +1081,8 @@ a.chip.level:hover {
   border-radius: 99px;
   overflow: hidden;
 }
-.passport .bar i,
-.pp-card .bar i {
+.passport .bar .fill,
+.pp-card .bar .fill {
   display: block;
   height: 100%;
   width: 0;
@@ -2376,7 +2376,8 @@ a.chip.level:hover {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
 }
-.fchip span i {
+.fchip[style] > span::before {
+  content: "";
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 50%;
@@ -3118,7 +3119,7 @@ html[data-decor="off"] .s-hero .wrap {
   font-size: 1.04rem;
   line-height: 1.5;
 }
-.aias-table th {
+.aias-table thead th {
   font: 800 0.8rem var(--ff-body);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -3126,13 +3127,14 @@ html[data-decor="off"] .s-hero .wrap {
   text-align: left;
   padding: 0.2rem 1rem;
 }
-.aias-table td {
+.aias-table td,
+.aias-table tbody th {
   padding: 1rem 1.1rem;
   vertical-align: top;
   background: var(--rowbg);
   border-block: 2px solid transparent;
 }
-.aias-table td:first-child {
+.aias-table tbody th {
   border-radius: 16px 0 0 16px;
   font: 800 1.25rem/1.2 var(--ff-display);
   border-left: 10px solid var(--rowc);
@@ -3192,7 +3194,8 @@ html[data-decor="off"] .s-hero .wrap {
     --rowbg: #40203a;
   }
 }
-.aias-table tr.focus td {
+.aias-table tr.focus td,
+.aias-table tr.focus th {
   border-block-color: var(--rowc);
 }
 .aias-table tr.focus td:last-child {
@@ -3225,7 +3228,8 @@ html[data-decor="off"] .s-hero .wrap {
     display: block;
     width: auto;
   }
-  .aias-table td {
+  .aias-table td,
+.aias-table tbody th {
     display: block;
     background: 0 0;
     padding: 0.4rem 1rem;
@@ -3247,7 +3251,7 @@ html[data-decor="off"] .s-hero .wrap {
     margin-bottom: 0.9rem;
     padding: 0.3rem 0 0.6rem;
   }
-  .aias-table td:first-child {
+  .aias-table tbody th {
     font-size: 1.3rem;
     border: 0;
   }
@@ -4034,30 +4038,30 @@ a.cta-shot:hover img {
   gap: 0.35rem;
   margin-top: 1.1rem;
 }
-.cefr-steps i {
+.cefr-steps span {
   flex: 1;
   height: 0.55rem;
   border-radius: 99px;
 }
-.cefr-steps i:nth-child(1) {
+.cefr-steps span:nth-child(1) {
   background: var(--a1);
   box-shadow: inset 0 0 0 2px var(--a-s);
 }
-.cefr-steps i:nth-child(2) {
+.cefr-steps span:nth-child(2) {
   background: var(--a-s);
 }
-.cefr-steps i:nth-child(3) {
+.cefr-steps span:nth-child(3) {
   background: var(--b1);
   box-shadow: inset 0 0 0 2px var(--b-s);
 }
-.cefr-steps i:nth-child(4) {
+.cefr-steps span:nth-child(4) {
   background: var(--b-s);
 }
-.cefr-steps i:nth-child(5) {
+.cefr-steps span:nth-child(5) {
   background: var(--c1);
   box-shadow: inset 0 0 0 2px var(--c-s);
 }
-.cefr-steps i:nth-child(6) {
+.cefr-steps span:nth-child(6) {
   background: var(--c-s);
 }
 .cefr-src {
@@ -4541,8 +4545,8 @@ a.cta-shot:focus-visible {
   letter-spacing: 0.02em;
   color: var(--at);
 }
-.aias-table td:first-child,
-.aias-table.orig td:first-child {
+.aias-table tbody th,
+.aias-table.orig tbody th {
   width: 19%;
 }
 .aias-table.orig .aias-cell .ico {
@@ -5415,5 +5419,49 @@ h3 {
   }
   .block.family > details.fold > summary .family-head h2 {
     font-size: 1.15rem;
+  }
+}
+/* RGAA 5.6 : en-têtes de ligne des tableaux AIAS */
+.aias-table tbody th {
+  text-align: left;
+  vertical-align: top;
+}
+/* RGAA 8.2 : le titre de famille est le conteneur (plus de div dans summary) */
+.block.family > details.fold > summary h2.family-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1.1rem;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  letter-spacing: -0.03em;
+  hyphens: auto;
+}
+@media (max-width: 400px) {
+  .block.family > details.fold > summary h2.family-head {
+    column-gap: 0.7rem;
+    font-size: 1.15rem;
+  }
+}
+/* RGAA 9.3 : .cards-r est une liste */
+ul.cards-r {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* RGAA 3.2 : texte indicatif du champ de recherche (3,69:1 en sombre) */
+.search input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+/* Mode contraste élevé : état coché des filtres visible */
+@media (forced-colors: active) {
+  .fchip input:checked + span {
+    forced-color-adjust: none;
+    background: Highlight;
+    color: HighlightText;
+    border-color: Highlight;
   }
 }
