@@ -373,7 +373,7 @@
       });
       t.addEventListener("keydown", function(e) {
         var j = null, n = tabs.length;
-        if (e.key === "ArrowRight") j = (i + 1) % n; else if (e.key === "ArrowLeft") j = (i + n - 1) % n;
+        if (e.key === "ArrowRight") j = (i + 1) % n; else if (e.key === "ArrowLeft") j = (i + n - 1) % n; else if (e.key === "Home") j = 0; else if (e.key === "End") j = n - 1;
         if (j != null) {
           e.preventDefault();
           pick(tabs[j], true);
