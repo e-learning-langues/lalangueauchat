@@ -4072,6 +4072,15 @@ a.cta-shot:hover img {
     grid-template-columns: 1fr;
   }
 }
+/* Long official level names: one level per row when the cards get narrow */
+@media (max-width: 420px), (min-width: 861px) {
+  .cefr-levels {
+    grid-template-columns: 1fr;
+  }
+}
+.cefr-levels .name {
+  hyphens: auto;
+}
 .site-footer .org {
   margin: 0;
   font-size: 1.05rem;
