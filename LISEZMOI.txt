@@ -13,7 +13,7 @@ L'adresse ci-dessus suppose un compte (ou une organisation) GitHub nommé « e-l
 
   1. Connectez-vous sur https://github.com avec le compte « e-learning-langues ».
   2. Créez un dépôt public nommé exactement « lalangueauchat » (bouton « New »).
-  3. Dans le dépôt, choisissez « Add file », puis « Upload files ». Faites glisser tout le contenu de ce dossier (les fichiers et les dossiers assets, fonts, img, en et es), puis validez avec « Commit changes ».
+  3. Dans le dépôt, choisissez « Add file », puis « Upload files ». Faites glisser tout le contenu de ce dossier (les fichiers et les dossiers assets, fonts, img, docs, en et es), puis validez avec « Commit changes ».
   4. Ouvrez « Settings », puis « Pages ». Dans « Build and deployment », choisissez « Deploy from a branch », la branche « main » et le dossier « / (root) », puis « Save ».
   5. Après quelques minutes, le site est visible à l'adresse indiquée en haut de ce fichier.
 
@@ -44,6 +44,7 @@ Ce qui fait le plus pour être trouvées : des liens vers le site depuis des sit
   [nom-de-station].html . les sept stations
   en/ ................... version anglaise (mêmes noms de fichiers)
   es/ ................... version espagnole (mêmes noms de fichiers)
+  docs/en/, docs/es/ .... fiches de prompts et grilles d'évaluation traduites (PDF)
   catalogue.html ........ toutes les activités, avec recherche et filtres
   404.html .............. page affichée quand une adresse n'existe pas
   sitemap.xml ........... la liste des pages, pour les moteurs de recherche
@@ -59,6 +60,9 @@ Le site existe en trois langues. Le français reste à la racine et sert de vers
   - Quand vous modifiez une page française, pensez à modifier aussi la même page dans en/ et es/, sinon les versions divergent.
   - Pour une mise en ligne, déposez aussi les dossiers en et es, comme à l'étape 3.
   - Les images qui contiennent du texte (captures d'écran, affiches) restent en français ; leurs descriptions (textes alternatifs) sont traduites.
+  - Les démos et les défis ne sont pas encore traduits : leurs liens portent la mention « (in French) » / « (en francés) », comme les vidéos et podcasts en français.
+  - Dans les cours de FLE, ce que voit l'étudiant reste en français. Les prompts FLE ont deux onglets sur les pages EN et ES : « Original (FR) », affiché par défaut, et « Adaptable », une version traduite et réutilisable dans toute langue cible.
+  - Sur les pages EN et ES, les liens « Lire le prompt (PDF) » et « Voir la grille d'évaluation » pointent vers les PDF traduits du dossier docs/ ; le site français garde les liens Google Drive d'origine.
 
 
 Licence : CC BY-NC-SA 4.0. Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte.
