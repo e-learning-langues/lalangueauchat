@@ -8,9 +8,9 @@
   };
   var root = document.documentElement;
   var L10N = {
-    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats" },
-    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results" },
-    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados" }
+    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats", langRegion: "Langue", langMsg: "Cette page existe aussi en français.", langGo: "Lire en français", langClose: "Fermer" },
+    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results", langRegion: "Language", langMsg: "This page is also available in English.", langGo: "Read in English", langClose: "Close" },
+    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados", langRegion: "Idioma", langMsg: "Esta página también está disponible en español.", langGo: "Leer en español", langClose: "Cerrar" }
   };
   var T = L10N[(root.getAttribute("lang") || "fr").slice(0, 2)] || L10N.fr;
   var store = {
@@ -545,4 +545,71 @@
     } catch (e) {}
     run();
   }
+  var pageLang = (root.getAttribute("lang") || "fr").slice(0, 2).toLowerCase();
+  if (pageLang !== "fr") {
+    $$(".cta-go").forEach(function(g) {
+      var a = g.closest("a"), img = a && $("img", a);
+      if (!img || $(".fr-badge", a)) return;
+      if (!/\((?:partly in French|in French|en parte en francés|en francés)\)/i.test(g.textContent)) return;
+      var b = document.createElement("span");
+      b.className = "fr-badge";
+      b.setAttribute("aria-hidden", "true");
+      b.textContent = "FR";
+      a.classList.add("has-fr-badge");
+      img.insertAdjacentElement("afterend", b);
+    });
+  }
+  var LANG_KEY = "llc-lang-choice";
+  $$(".lang-switch a[hreflang]").forEach(function(a) {
+    a.addEventListener("click", function() {
+      store.set(LANG_KEY, a.getAttribute("hreflang"));
+    });
+  });
+  (function() {
+    if (store.get(LANG_KEY, null) != null) return;
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [ navigator.language || "" ];
+    var want = null;
+    for (var k = 0; k < langs.length; k++) {
+      var c = String(langs[k] || "").slice(0, 2).toLowerCase();
+      if (L10N[c]) {
+        want = c;
+        break;
+      }
+    }
+    if (!want || want === pageLang) return;
+    var alt = $('link[rel="alternate"][hreflang="' + want + '"]');
+    if (!alt) return;
+    var sw = $('.lang-switch a[hreflang="' + want + '"]');
+    var href = sw ? sw.getAttribute("href") : alt.getAttribute("href");
+    if (!href) return;
+    var M = L10N[want];
+    var box = document.createElement("div");
+    box.className = "lang-hint";
+    box.setAttribute("role", "region");
+    box.setAttribute("aria-label", M.langRegion);
+    box.setAttribute("lang", want);
+    box.innerHTML = '<div class="wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.9 5.8 3.9 9s-1.3 6.2-3.9 9c-2.6-2.8-3.9-5.8-3.9-9S9.4 5.8 12 3Z"/></svg><p></p><a class="lang-hint-go"></a><button type="button" class="lang-hint-x"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>';
+    $("p", box).textContent = M.langMsg;
+    var go = $(".lang-hint-go", box);
+    go.href = href;
+    go.setAttribute("hreflang", want);
+    go.textContent = M.langGo;
+    var x = $(".lang-hint-x", box);
+    x.setAttribute("aria-label", M.langClose);
+    x.title = M.langClose;
+    go.addEventListener("click", function() {
+      store.set(LANG_KEY, want);
+    });
+    x.addEventListener("click", function() {
+      store.set(LANG_KEY, pageLang);
+      box.remove();
+      var m = $("main");
+      if (m) m.focus({
+        preventScroll: true
+      });
+    });
+    if (!reduceMotion()) box.classList.add("anim");
+    var hd = $(".site-header");
+    if (hd && hd.parentNode) hd.parentNode.insertBefore(box, hd.nextSibling); else document.body.insertBefore(box, document.body.firstChild);
+  })();
 })();
