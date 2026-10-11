@@ -1,12 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/catalogue.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html</loc><lastmod>2026-10-04</lastmod></url>
-<url><loc>https://e-learning-langues.github.io/lalangueauchat/production-orale.html</loc><lastmod>2026-10-04</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/interaction-ecrite.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/interaction-ecrite.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/interaction-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/interaction-ecrite.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/production-orale.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/production-orale.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/production-orale.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/production-orale.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/production-orale.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/production-orale.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/production-orale.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/production-ecrite.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/production-ecrite.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/production-ecrite.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/production-ecrite.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/outils-et-regard-critique.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/outils-et-regard-critique.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/outils-et-regard-critique.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/outils-et-regard-critique.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/initiation-recherche.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/initiation-recherche.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/initiation-recherche.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/initiation-recherche.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/evaluation-sommative.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/evaluation-sommative.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/evaluation-sommative.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/evaluation-sommative.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/conception-pedagogique.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/conception-pedagogique.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/conception-pedagogique.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/conception-pedagogique.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/catalogue.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/catalogue.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/en/catalogue.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/catalogue.html"/>
+</url>
+<url><loc>https://e-learning-langues.github.io/lalangueauchat/es/catalogue.html</loc><lastmod>2026-10-11</lastmod>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://e-learning-langues.github.io/lalangueauchat/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://e-learning-langues.github.io/lalangueauchat/en/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://e-learning-langues.github.io/lalangueauchat/es/catalogue.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://e-learning-langues.github.io/lalangueauchat/catalogue.html"/>
+</url>
 </urlset>

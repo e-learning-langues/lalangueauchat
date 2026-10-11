@@ -4954,3 +4954,12 @@ body[data-station="4"] .s-art::after {
     color: HighlightText;
   }
 }
+
+/* Mobile : le flou d'arrière-plan de l'en-tête enfermait le menu (position fixed) dans l'en-tête */
+@media (max-width: 900px) {
+  .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg);
+  }
+}

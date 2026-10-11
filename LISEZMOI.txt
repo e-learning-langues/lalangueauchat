@@ -13,7 +13,7 @@ L'adresse ci-dessus suppose un compte (ou une organisation) GitHub nommé « e-l
 
   1. Connectez-vous sur https://github.com avec le compte « e-learning-langues ».
   2. Créez un dépôt public nommé exactement « lalangueauchat » (bouton « New »).
-  3. Dans le dépôt, choisissez « Add file », puis « Upload files ». Faites glisser tout le contenu de ce dossier (les fichiers et les dossiers assets, fonts et img), puis validez avec « Commit changes ».
+  3. Dans le dépôt, choisissez « Add file », puis « Upload files ». Faites glisser tout le contenu de ce dossier (les fichiers et les dossiers assets, fonts, img, en et es), puis validez avec « Commit changes ».
   4. Ouvrez « Settings », puis « Pages ». Dans « Build and deployment », choisissez « Deploy from a branch », la branche « main » et le dossier « / (root) », puis « Save ».
   5. Après quelques minutes, le site est visible à l'adresse indiquée en haut de ce fichier.
 
@@ -42,11 +42,23 @@ Ce qui fait le plus pour être trouvées : des liens vers le site depuis des sit
 
   index.html ............ accueil
   [nom-de-station].html . les sept stations
+  en/ ................... version anglaise (mêmes noms de fichiers)
+  es/ ................... version espagnole (mêmes noms de fichiers)
   catalogue.html ........ toutes les activités, avec recherche et filtres
   404.html .............. page affichée quand une adresse n'existe pas
   sitemap.xml ........... la liste des pages, pour les moteurs de recherche
   assets/ ............... mise en forme et fonctionnement
   fonts/ ................ polices de caractères
   img/ .................. images (dont partage.jpg, la vignette de partage)
+
+4. VERSIONS ANGLAISE ET ESPAGNOLE
+
+Le site existe en trois langues. Le français reste à la racine et sert de version de référence ; l'anglais est dans le dossier en/ et l'espagnol dans le dossier es/. Chaque page porte un sélecteur FR · EN · ES dans l'en-tête, qui mène à la même page dans l'autre langue.
+
+  - Les traductions ont été faites avec Claude à partir du français : une relecture par l'équipe (ou par des collègues anglophones et hispanophones) est conseillée avant de diffuser largement.
+  - Quand vous modifiez une page française, pensez à modifier aussi la même page dans en/ et es/, sinon les versions divergent.
+  - Pour une mise en ligne, déposez aussi les dossiers en et es, comme à l'étape 3.
+  - Les images qui contiennent du texte (captures d'écran, affiches) restent en français ; leurs descriptions (textes alternatifs) sont traduites.
+
 
 Licence : CC BY-NC-SA 4.0. Kenza Belhaj Soullami, Katie Dallinger, Julie Laporte.
