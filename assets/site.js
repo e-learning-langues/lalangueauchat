@@ -7,6 +7,12 @@
     return Array.prototype.slice.call((r || document).querySelectorAll(s));
   };
   var root = document.documentElement;
+  var L10N = {
+    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats" },
+    en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results" },
+    es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados" }
+  };
+  var T = L10N[(root.getAttribute("lang") || "fr").slice(0, 2)] || L10N.fr;
   var store = {
     get: function(k, def) {
       try {
@@ -316,9 +322,9 @@
       txt = src ? src.innerText.trim() : "";
     }
     copyText(txt).then(function() {
-      say(b.getAttribute("data-ok") || "Copié !");
+      say(b.getAttribute("data-ok") || T.copied);
     }, function() {
-      say("Copie impossible : sélectionnez le texte à la main.");
+      say(T.copyFail);
     });
   });
   var visited = store.get("llc-vues", []);
@@ -340,7 +346,7 @@
       if (cb.checked) defis[id] = 1; else delete defis[id];
       store.set("llc-defis-releves", defis);
       paint();
-      if (cb.checked) say("Tampon posé !");
+      if (cb.checked) say(T.stamp);
     });
   });
   $$(".st-card[data-n]").forEach(function(c) {
@@ -365,7 +371,7 @@
     var panels = $$(".lv-panel", lad), list = document.createElement("div");
     list.className = "lv-tabs";
     list.setAttribute("role", "tablist");
-    list.setAttribute("aria-label", "Niveaux de l’échelle");
+    list.setAttribute("aria-label", T.ladder);
     var tabs = panels.map(function(p, i) {
       var b = document.createElement("button");
       b.type = "button";
@@ -440,7 +446,7 @@
         it.hidden = !ok;
         if (ok) n++;
       });
-      cnt.textContent = n + (n > 1 ? " résultats" : " résultat");
+      cnt.textContent = n + ((T === L10N.fr ? n > 1 : n !== 1) ? T.many : T.one);
       empty.style.display = n ? "none" : "block";
       try {
         var p = new URLSearchParams;
