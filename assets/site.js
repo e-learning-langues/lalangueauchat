@@ -327,6 +327,38 @@
       say(T.copyFail);
     });
   });
+  $$(".ptabs").forEach(function(tl) {
+    var tabs = $$("[role=tab]", tl), base = tl.getAttribute("data-for");
+    var btns = $$("[data-copy]").filter(function(b) {
+      var v = b.getAttribute("data-copy");
+      return v === base || v === base + "a";
+    });
+    function pick(t, focus) {
+      tabs.forEach(function(x) {
+        var on = x === t, panel = document.getElementById(x.getAttribute("aria-controls"));
+        x.setAttribute("aria-selected", on);
+        x.tabIndex = on ? 0 : -1;
+        if (panel) panel.hidden = !on;
+      });
+      btns.forEach(function(b) {
+        b.setAttribute("data-copy", t.getAttribute("aria-controls"));
+      });
+      if (focus) t.focus();
+    }
+    tabs.forEach(function(t, i) {
+      t.addEventListener("click", function() {
+        pick(t);
+      });
+      t.addEventListener("keydown", function(e) {
+        var j = null, n = tabs.length;
+        if (e.key === "ArrowRight") j = (i + 1) % n; else if (e.key === "ArrowLeft") j = (i + n - 1) % n;
+        if (j != null) {
+          e.preventDefault();
+          pick(tabs[j], true);
+        }
+      });
+    });
+  });
   var visited = store.get("llc-vues", []);
   var sn = document.body.getAttribute("data-station");
   if (sn && visited.indexOf(sn) < 0) {

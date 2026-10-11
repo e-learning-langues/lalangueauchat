@@ -4963,3 +4963,171 @@ body[data-station="4"] .s-art::after {
     background: var(--bg);
   }
 }
+
+/* Prompts harmonisés : paragraphes aérés, intitulés en gras */
+.ptext p + p {
+  margin-top: 0.75em;
+}
+
+.ptext strong {
+  font-weight: 800;
+}
+
+/* Prompt FLE : onglets « Original (FR) » / « Adaptable » à la place de l'étiquette PROMPT */
+.prompt .ptabs {
+  position: absolute;
+  left: 0.8rem;
+  top: 0.55rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.prompt .ptabs [role="tab"] {
+  font: 800 0.74rem/1 var(--ff-mono);
+  letter-spacing: 0.06em;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  min-height: 1.9rem;
+  cursor: pointer;
+}
+
+.prompt .ptabs [role="tab"]:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.prompt .ptabs [role="tab"][aria-selected="true"] {
+  color: #211f1b;
+  background: #f4c27a;
+}
+
+.prompt .ptabs [role="tab"]:focus-visible {
+  outline: 2px solid #f4c27a;
+  outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  .prompt .ptabs [role="tab"][aria-selected="true"] {
+    forced-color-adjust: none;
+    background: Highlight;
+    color: HighlightText;
+  }
+}
+
+/* Sélecteur de langue : globe + version mobile visible hors du menu */
+.lang-switch > .ico {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0 0.15rem 0 0.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  color: var(--muted, currentColor);
+  flex: none;
+}
+
+.lang-switch.lang-m {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav .lang-switch {
+    display: none;
+  }
+
+  .lang-switch.lang-m {
+    display: inline-flex;
+    margin: 0 0 0 auto;
+    padding: 0.15rem;
+  }
+
+  .lang-switch.lang-m a {
+    min-width: 2.1rem;
+    min-height: 2.1rem;
+    padding: 0 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .lang-switch.lang-m > .ico {
+    display: none;
+  }
+}
+
+.site-header .lang-switch a {
+  text-decoration: none !important;
+}
+
+@media (max-width: 900px) {
+  .site-header .lang-switch.lang-m {
+    align-self: center;
+    margin: 0;
+  }
+
+  .site-header .brand {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header .brand {
+    font-size: 1.02rem;
+    gap: 0.4rem;
+  }
+
+  .site-header .brand .cat {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header .contact-m {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .site-header .brand span:not(.cat) {
+    font-size: 0.92rem;
+  }
+
+  .lang-switch.lang-m a {
+    min-width: 1.9rem;
+    padding: 0 0.2rem;
+  }
+}
+
+.site-header button.burger,
+.site-header .contact-m {
+  flex: none;
+}
+
+@media (max-width: 380px) {
+  .site-header .brand span:not(.cat) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+/* Titres longs (mots espagnols ou anglais) sur petits écrans */
+.family-head {
+  min-width: 0;
+}
+
+.family-head h2,
+.act-head h3 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.prompt.prompt-tabs {
+  padding-top: 3.4rem;
+}
