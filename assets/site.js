@@ -269,12 +269,13 @@
     var p = el.closest("[role=tabpanel]");
     if (p) {
       var rf = p.closest(".reflect");
-      var i = rf._panels.indexOf(p);
-      if (i > -1) rf._sel(rf._tabs[i]);
-    } else if (el.matches("[role=tabpanel]")) {
-      var rf2 = el.closest(".reflect");
-      var j = rf2._panels.indexOf(el);
-      rf2._sel(rf2._tabs[j]);
+      if (rf && rf._panels) {
+        var i = rf._panels.indexOf(p);
+        if (i > -1) rf._sel(rf._tabs[i]);
+      } else {
+        var t = document.querySelector('[role=tab][aria-controls="' + p.id + '"]');
+        if (t && t.getAttribute("aria-selected") !== "true") t.click();
+      }
     }
   }
   window.addEventListener("hashchange", openHash);
@@ -288,7 +289,10 @@
       openFolds(el);
     }
     if (el && (el.matches("[role=tabpanel]") || el.closest("[role=tabpanel]"))) {
-      setTimeout(openHash, 0);
+      setTimeout(function() {
+        openHash();
+        el.scrollIntoView();
+      }, 0);
     }
   });
   function copyText(txt) {

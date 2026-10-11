@@ -168,6 +168,15 @@
   --line: #9a9384;
   --line-2: #cfc8ba;
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme])[data-contrast="high"] {
+    --ink: #fff;
+    --ink-2: #fff;
+    --muted: #eee;
+    --line: #9a9384;
+    --line-2: #cfc8ba;
+  }
+}
 body {
   --accent-text: var(--accent);
   margin: 0;
@@ -1823,7 +1832,7 @@ a.chip.level:hover {
 }
 .tab .count {
   font: 800 0.78rem var(--ff-body);
-  background: var(--tint-2);
+  background: color-mix(in oklch, var(--accent) 8%, var(--surface));
   color: var(--accent-text);
   border-radius: 99px;
   padding: 0.18rem 0.5rem;
@@ -5087,6 +5096,11 @@ body[data-station="4"] .s-art::after {
 @media (max-width: 520px) {
   .site-header .contact-m {
     display: none;
+  }
+
+  /* Sans l’icône d’en-tête, le lien Contact reste accessible dans le menu */
+  .nav a.contact {
+    display: flex;
   }
 }
 
