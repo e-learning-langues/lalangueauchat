@@ -310,6 +310,24 @@
       ta.remove();
     });
   }
+  function textOf(el) {
+    var shut = [], d = el.closest("details");
+    while (d) {
+      if (!d.open) {
+        d.open = true;
+        shut.push(d);
+      }
+      d = d.parentElement ? d.parentElement.closest("details") : null;
+    }
+    var h = el.hidden;
+    el.hidden = false;
+    var t = el.innerText;
+    el.hidden = h;
+    shut.forEach(function(x) {
+      x.open = false;
+    });
+    return (t && t.trim() ? t : el.textContent).trim();
+  }
   document.addEventListener("click", function(e) {
     var b = e.target.closest("[data-copy]");
     if (!b) return;
@@ -319,7 +337,11 @@
       txt = b.getAttribute("data-text");
     } else {
       var src = document.getElementById(sel);
-      txt = src ? src.innerText.trim() : "";
+      txt = src ? textOf(src) : "";
+    }
+    if (!txt) {
+      say(T.copyFail);
+      return;
     }
     copyText(txt).then(function() {
       say(b.getAttribute("data-ok") || T.copied);
