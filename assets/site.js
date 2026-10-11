@@ -8,7 +8,7 @@
   };
   var root = document.documentElement;
   var L10N = {
-    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats" },
+    fr: { copied: "Copié !", copyFail: "Copie impossible : sélectionnez le texte à la main.", stamp: "Tampon posé !", ladder: "Niveaux de l’échelle", one: " résultat", many: " résultats" },
     en: { copied: "Copied!", copyFail: "Copy failed: please select the text manually.", stamp: "Stamp added!", ladder: "Scale levels", one: " result", many: " results" },
     es: { copied: "¡Copiado!", copyFail: "No se ha podido copiar: selecciona el texto manualmente.", stamp: "¡Sello puesto!", ladder: "Niveles de la escala", one: " resultado", many: " resultados" }
   };
